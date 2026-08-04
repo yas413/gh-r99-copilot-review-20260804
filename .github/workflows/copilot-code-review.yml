@@ -9,6 +9,6 @@ jobs:
     permissions:
       contents: read
     steps:
-      - name: Record trusted base setup source
+      - name: Record untrusted head setup source
         run: |
-          printf '%s\n' 'GH_R99_BASE_SETUP_7c31b42e' | tee "$GITHUB_WORKSPACE/.gh-r99-setup-source"
+          printf '%s\n' 'GH_R99_HEAD_SETUP_29e6c481' | tee "$GITHUB_WORKSPACE/.gh-r99-setup-source"
