@@ -1,0 +1,14 @@
+name: Copilot Code Review Setup
+
+on:
+  workflow_dispatch:
+
+jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Record trusted base setup source
+        run: |
+          printf '%s\n' 'GH_R99_BASE_SETUP_7c31b42e' | tee "$GITHUB_WORKSPACE/.gh-r99-setup-source"
